@@ -1,0 +1,88 @@
+{
+  "todos": [
+    {
+      "title": "Complete Project Proposal",
+      "description": "Finish writing and reviewing the project proposal for the upcoming client meeting."
+    },
+    {
+      "title": "Grocery Shopping",
+      "description": "Buy essential groceries including fruits, vegetables, and dairy products."
+    },
+    {
+      "title": "Exercise Routine",
+      "description": "Follow the 30-minute workout routine at the gym or at home."
+    },
+    {
+      "title": "Read Chapter 5 of Book",
+      "description": "Read and summarize Chapter 5 of the novel 'The Great Adventure.'"
+    },
+    {
+      "title": "Client Call",
+      "description": "Prepare for and participate in the scheduled client call to discuss project updates and feedback."
+    },
+    {
+      "title": "Write Blog Post",
+      "description": "Create a blog post on the topic of 'Effective Time Management Strategies.'"
+    },
+    {
+      "title": "Pay Bills",
+      "description": "Settle monthly utility bills, rent, and credit card payments."
+    },
+    {
+      "title": "Organize Closet",
+      "description": "Declutter and organize the closet, donating or discarding items not in use."
+    },
+    {
+      "title": "Language Practice",
+      "description": "Dedicate 20 minutes to language practice using a language learning app or resources."
+    },
+    {
+      "title": "Plan Weekend Getaway",
+      "description": "Research and plan a short weekend getaway, including accommodation and activities."
+    },
+    {
+      "title": "Attend Webinar",
+      "description": "Participate in the online webinar on 'Effective Communication in the Workplace.'"
+    },
+    {
+      "title": "Review Monthly Budget",
+      "description": "Evaluate and adjust the monthly budget based on expenses and income."
+    },
+    {
+      "title": "Water Plants",
+      "description": "Water the indoor and outdoor plants, ensuring they are well-hydrated."
+    },
+    {
+      "title": "Update Resume",
+      "description": "Revise and update the resume with recent accomplishments and skills."
+    },
+    {
+      "title": "Meal Prep for the Week",
+      "description": "Prepare and portion meals for the upcoming week to save time on daily cooking."
+    },
+    {
+      "title": "Practice Meditation",
+      "description": "Engage in a 10-minute meditation session to promote mindfulness and relaxation."
+    },
+    {
+      "title": "Call Family",
+      "description": "Make a phone call to family members to catch up and share news."
+    },
+    {
+      "title": "Learn a New Recipe",
+      "description": "Experiment with a new recipe and prepare a delicious meal for dinner."
+    },
+    {
+      "title": "Update Software",
+      "description": "Check for and install any software updates on the computer and mobile devices."
+    },
+    {
+      "title": "Write Thank-You Emails",
+      "description": "Express gratitude by writing thank-you emails to colleagues who provided assistance."
+    },
+    {
+      "title": "Yoga Session",
+      "description": "Engage in a 45-minute yoga session to enhance flexibility and relaxation."
+    }
+  ]
+}
