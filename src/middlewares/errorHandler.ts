@@ -12,8 +12,10 @@ export default (
   next: express.NextFunction
 ) => {
   if (error instanceof CustomError) {
-    res.status(error.statusCode).json({ msg: error.message });
+    res
+      .status(error.statusCode)
+      .json({ success: false, message: error.message, data: {} });
   } else if (error instanceof MongooseError) {
-    res.status(500).json({ msg: error.message });
+    res.status(500).json({ success: false, message: error.message, data: {} });
   }
 };

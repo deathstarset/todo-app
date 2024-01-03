@@ -7,7 +7,13 @@ import BadRequest from "../errors/badRequest";
 export const getTodos = asyncMiddleware(
   async (req: express.Request, res: express.Response) => {
     const todos = await todoModel.find();
-    res.status(200).json({ todos });
+    res
+      .status(200)
+      .json({
+        success: true,
+        message: "Todos Sent Succefully",
+        data: { todos },
+      });
   }
 );
 
@@ -23,7 +29,9 @@ export const getTodo = asyncMiddleware(
       return next(new NotFoundError("Todo Not Found"));
     }
 
-    res.status(200).json({ todo });
+    res
+      .status(200)
+      .json({ success: true, message: "Todo Sent Succefully", data: { todo } });
   }
 );
 
@@ -52,7 +60,11 @@ export const deleteTodo = asyncMiddleware(
     if (!todo) {
       return next(new NotFoundError("Todo Not Found"));
     }
-    res.status(200).json({ msg: "Todo Deleted", todo });
+    res.status(200).json({
+      success: true,
+      message: "Todo Deleted Succefully",
+      data: { todo },
+    });
   }
 );
 
@@ -72,7 +84,11 @@ export const updateTodo = asyncMiddleware(
     if (!todo) {
       return next(new NotFoundError("Todo Not Found"));
     }
-    res.status(201).json({ msg: "Todo Updated", todo });
+    res.status(201).json({
+      success: true,
+      message: "Todo Updated Succefully",
+      data: { todo },
+    });
   }
 );
 
@@ -87,6 +103,10 @@ export const createTodo = asyncMiddleware(
       return next(new BadRequest("More Info Needs To Be Provided"));
     }
     const todo = await todoModel.create({ title, description });
-    res.status(201).json({ msg: "Todo Created", todo });
+    res.status(201).json({
+      success: true,
+      message: "Todo Created Succefully",
+      data: { todo },
+    });
   }
 );
