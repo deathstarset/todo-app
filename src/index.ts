@@ -3,8 +3,15 @@ import express from "express";
 import { dbConnect } from "./db/connect";
 import router from "./routes/index";
 import errorHandler from "./middlewares/errorHandler";
+import cors from "cors";
+import { populate } from "./db/populate";
 const app = express();
 
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+  })
+);
 app.use(express.json());
 app.use("/api/v1", router());
 app.use(errorHandler);

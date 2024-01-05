@@ -9,6 +9,10 @@ const todoSchema = new mongoose.Schema({
     type: String,
     required: [true, "Description Not Found"],
   },
+  completed: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 export const todoModel = mongoose.model("Todo", todoSchema);

@@ -6,14 +6,12 @@ import BadRequest from "../errors/badRequest";
 
 export const getTodos = asyncMiddleware(
   async (req: express.Request, res: express.Response) => {
-    const todos = await todoModel.find();
-    res
-      .status(200)
-      .json({
-        success: true,
-        message: "Todos Sent Succefully",
-        data: { todos },
-      });
+    const todos = await todoModel.find({}, "-__v");
+    res.status(200).json({
+      success: true,
+      message: "Todos Sent Succefully",
+      data: { todos },
+    });
   }
 );
 
@@ -74,11 +72,11 @@ export const updateTodo = asyncMiddleware(
     res: express.Response,
     next: express.NextFunction
   ) => {
-    const { title, description } = req.body;
+    const { title, description, completed } = req.body;
     const { todoID } = req.params;
     const todo = await todoModel.findByIdAndUpdate(
       todoID,
-      { title, description },
+      { title, description, completed },
       { new: true }
     );
     if (!todo) {
