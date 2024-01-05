@@ -8,10 +8,12 @@ function App() {
   const [filter, setFilter] = useState<Filter>("all");
 
   return (
-    <div className="container my-10 flex flex-col gap-8">
+    <div className="container my-10 flex flex-col gap-8 lg:flex-row">
       <Heading setFilter={setFilter} />
-      <AddTodo />
-      <DisplayTodos filter={filter} />
+      <div className="flex flex-col gap-8 w-full">
+        <AddTodo />
+        <DisplayTodos filter={filter} />
+      </div>
     </div>
   );
 }

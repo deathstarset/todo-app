@@ -59,6 +59,7 @@ export const addTodo = async (props: {
       },
       body: JSON.stringify({ ...props }),
     });
+
     return await res.json();
   } catch (error) {
     return error;

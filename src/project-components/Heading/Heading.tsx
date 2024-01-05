@@ -6,8 +6,8 @@ export type HeadingProps = {
 };
 export const Heading = ({ setFilter }: HeadingProps) => {
   return (
-    <div className="flex items-center justify-between">
-      <div className="flex items-center gap-4">
+    <div className="flex items-center justify-between lg:flex-col lg:gap-5 lg:justify-normal">
+      <div className="flex items-center gap-4 ">
         <CalendarCheck />
         <h1 className="text-2xl font-semibold">Today</h1>
       </div>

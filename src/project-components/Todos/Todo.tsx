@@ -35,12 +35,18 @@ export const Todo = ({ id, title, description, completed }: TodoProps) => {
     </Card>
   );
   const normalScreenTodo = (
-    <Card className="items-center justify-between p-4 ">
-      <div className="items-center gap-2">
-        {windowSize.width && windowSize.width >= 375 && <Checkbox />}
-        <h2 className="w-full break-all">{title}</h2>
+    <Card className="flex items-center justify-between p-4 gap-4">
+      <h2 className="w-full break-all">{title}</h2>
+      <div className="flex items-center gap-4">
+        <Badge variant={completed ? "default" : "destructive"}>
+          {todoStatus}
+        </Badge>
+        {completed ? (
+          <ConfirmDeleteTodo id={id} />
+        ) : (
+          <Button onClick={() => setTodoFinished(id)}>Finish</Button>
+        )}
       </div>
-      <Badge>{todoStatus}</Badge>
     </Card>
   );
   return <>{windowSize.width > 375 ? normalScreenTodo : smallScreenTodo}</>;
